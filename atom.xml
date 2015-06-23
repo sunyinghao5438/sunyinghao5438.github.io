@@ -5,11 +5,11 @@
   <subtitle><![CDATA[Geek Football Ingeniousness]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://sunyinghao5438.com//"/>
-  <updated>2015-06-23T16:38:51.000Z</updated>
+  <updated>2015-06-23T23:50:08.000Z</updated>
   <id>http://sunyinghao5438.com//</id>
   
   <author>
-    <name><![CDATA[Yinghao Sun]]></name>
+    <name><![CDATA[sunyinghao5438]]></name>
     <email><![CDATA[sunyinghao5438@gmail.com]]></email>
   </author>
   
@@ -17,17 +17,22 @@
   
   <entry>
     <title><![CDATA[Hello World！]]></title>
-    <link href="http://sunyinghao5438.com/2015/06/23/hello-world/"/>
-    <id>http://sunyinghao5438.com/2015/06/23/hello-world/</id>
-    <published>2015-06-23T16:38:52.000Z</published>
-    <updated>2015-06-23T16:38:51.000Z</updated>
+    <link href="http://sunyinghao5438.com/2015/06/24/hello-world/"/>
+    <id>http://sunyinghao5438.com/2015/06/24/hello-world/</id>
+    <published>2015-06-23T23:50:08.000Z</published>
+    <updated>2015-06-23T23:50:08.000Z</updated>
     <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br></pre></td></tr></table></figure>
 <p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/IMG_0461.jpg" alt="image"></p>
 <p>和这个美好的世界say hi.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span clas]]>
+    <![CDATA[hello world!博客第一天的第一篇文章]]>
+    
     </summary>
+    
+      <category term="aboutme" scheme="http://sunyinghao5438.com/tags/aboutme/"/>
+    
+      <category term="pug" scheme="http://sunyinghao5438.com/tags/pug/"/>
     
   </entry>
   
