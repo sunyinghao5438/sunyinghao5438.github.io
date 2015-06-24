@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Geek Football Ingeniousness]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://sunyinghao5438.com//"/>
-  <updated>2015-06-23T23:50:08.000Z</updated>
+  <updated>2015-06-23T23:50:19.000Z</updated>
   <id>http://sunyinghao5438.com//</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title><![CDATA[Hello World！]]></title>
     <link href="http://sunyinghao5438.com/2015/06/24/hello-world/"/>
     <id>http://sunyinghao5438.com/2015/06/24/hello-world/</id>
-    <published>2015-06-23T23:50:08.000Z</published>
-    <updated>2015-06-23T23:50:08.000Z</updated>
+    <published>2015-06-24T15:50:33.000Z</published>
+    <updated>2015-06-23T23:50:19.000Z</updated>
     <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br></pre></td></tr></table></figure>
 <p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/IMG_0461.jpg" alt="image"></p>
 <p>和这个美好的世界say hi.</p>
@@ -33,6 +33,31 @@
       <category term="aboutme" scheme="http://sunyinghao5438.com/tags/aboutme/"/>
     
       <category term="pug" scheme="http://sunyinghao5438.com/tags/pug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[跟sun学swift(一)]]></title>
+    <link href="http://sunyinghao5438.com/2015/06/24/%E8%B7%9Fsun%E5%AD%A6swift(%E4%B8%80)/"/>
+    <id>http://sunyinghao5438.com/2015/06/24/跟sun学swift(一)/</id>
+    <published>2015-06-24T10:36:41.000Z</published>
+    <updated>2015-06-24T15:52:45.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="写在前面">写在前面</h2><p>这个系列的博客想记录下最近这段时间学习swift的平台，也想更多人参与讨论学习swift和iOS开发。学习教材是斯坦福大学的 iOS 8教程。老师是：Paul Hegarty，很喜欢这个白胡子老爷爷。博主有半年时间的iOS开发经验，希望能帮助到大家一起学习这门新的语言。</p>
+<h2 id="第一个swift程序：Calculator">第一个swift程序：Calculator</h2>]]></content>
+    <summary type="html">
+    <![CDATA[swift学习笔记]]>
+    
+    </summary>
+    
+      <category term="Learning" scheme="http://sunyinghao5438.com/tags/Learning/"/>
+    
+      <category term="Stanford" scheme="http://sunyinghao5438.com/tags/Stanford/"/>
+    
+      <category term="Xcode" scheme="http://sunyinghao5438.com/tags/Xcode/"/>
+    
+      <category term="iOS" scheme="http://sunyinghao5438.com/tags/iOS/"/>
+    
+      <category term="swift" scheme="http://sunyinghao5438.com/tags/swift/"/>
     
   </entry>
   
