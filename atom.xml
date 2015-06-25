@@ -41,9 +41,21 @@
     <link href="http://sunyinghao5438.com/2015/06/24/%E8%B7%9Fsun%E5%AD%A6swift(%E4%B8%80)/"/>
     <id>http://sunyinghao5438.com/2015/06/24/跟sun学swift(一)/</id>
     <published>2015-06-24T10:36:41.000Z</published>
-    <updated>2015-06-24T15:52:45.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="写在前面">写在前面</h2><p>这个系列的博客想记录下最近这段时间学习swift的平台，也想更多人参与讨论学习swift和iOS开发。学习教材是斯坦福大学的 iOS 8教程。老师是：Paul Hegarty，很喜欢这个白胡子老爷爷。博主有半年时间的iOS开发经验，希望能帮助到大家一起学习这门新的语言。</p>
-<h2 id="第一个swift程序：Calculator">第一个swift程序：Calculator</h2>]]></content>
+    <updated>2015-06-25T01:44:56.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="写在前面">写在前面</h2><p>这个系列的博客想记录下最近这段时间学习swift的平台，也想更多人参与讨论学习swift和iOS开发。学习教材是斯坦福大学的 iOS 8教程。老师是：Paul Hegarty，很喜欢这个白胡子老爷爷。博主有半年时间的iOS开发经验，希望和大家一起学习这个语言</p>
+<h2 id="第一个swift程序：Calculator">第一个swift程序：Calculator</h2><p><code>import UIKit</code><br><code>class ViewController: UIViewController {</code><br><code>@IBOutlet weak var display: UILabel!</code><br><code>var userIsInTheMiddleOfTypingANumber: Bool = false</code><br><code>@IBAction func appendDigit(sender: UIButton) {</code><br><code>let digit = sender.currentTitle!</code><br><code>if userIsInTheMiddleOfTypingANumber{</code><br><code>display.text = display.text! + digit</code><br><code>}else{</code><br><code>display.text=digit</code><br><code>userIsInTheMiddleOfTypingANumber=true</code><br><code>}</code><br><code>}</code><br><code>}</code><br>Swift 说实话比起Obj-c要友善太多，看着上面几行代码，一般有程序基础的人都可以非常清楚的读懂代码，但是也会发出质疑，那个<em>感叹号！</em>到底是什么意思？</p>
+<h2 id="感叹号">感叹号</h2><p>Swift语言使用var定义变量，但和别的语言不同，Swift里不会自动给变量赋初始值，也就是说变量不会有默认值，所以要求使用变量之前必须要对其初始化。如果在使用变量之前不进行初始化就会报错。</p>
+<blockquote>
+<p>Swift还增加了optional型别，用于处理值不存在的情况。optional表示「那儿有一个值，并且它等于x 」或者「那儿没有值」。<br>当你确定可选类型确实包含值之后，你可以在可选的名字后面加一个<em>！</em>来获取值。这个惊叹号表示“我知道这个可选有值，请使用它。”这被称为可选值的强制解析（forced unwrapping）<br>具体关于这方面可以看官方<a href="http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/chapter2/01_The_Basics.html#optionals" title="optionals" target="_blank" rel="external">说明文档</a></p>
+<h2 id="声明常量和变量">声明常量和变量</h2><p>常量和变量必须在使用前声明，用let来声明常量，用var来声明变量。看下面例子<br><code>var wobuhuibian = 0</code><br><code>var wobuhuibian = 0</code></p>
+<ol>
+<li>let 申明的 wobuhuibian 就是永远不会变</li>
+<li>var 申明的 wohuibian 在下面的程序中的一些操作，可以使数值改变<br>严格以上这个是一个很小的改进，但是对于程序员阅读代码的时候意义非凡。如果知道一个数值用let定义一个数值那它一辈子都不会变。虽然很多代码可以用const之类的来定义，但感觉上就没有let那么简单直白。还有幸运的事情是，常量和变量你都可以用Unicode字符来定义。举个🍐<br><code>let π = 3.14159</code><br><code>var 我会变 = 0</code><br><code>var 我不会变 = 0</code><br><code>let 🐒= &quot;monkey&quot;
+``let 🌚= &quot;blackface&quot;
+``let ☀️🐶= &quot;日了个狗&quot;</code>好啦，今天的学习就到这里。<br><a href="https://github.com/sunyinghao5438/Calculator-swift" title="代码下载" target="_blank" rel="external">代码下载</a></li>
+</ol>
+</blockquote>
+]]></content>
     <summary type="html">
     <![CDATA[swift学习笔记]]>
     
