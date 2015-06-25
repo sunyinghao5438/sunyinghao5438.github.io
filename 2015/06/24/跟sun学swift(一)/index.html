@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="sunyinghao5438">
 <meta property="og:description" content="swift学习笔记">
 <meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/swift_coffee.png">
-<meta property="og:updated_time" content="2015-06-25T09:15:37.000Z">
+<meta property="og:updated_time" content="2015-06-25T15:43:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跟sun学swift(一)">
 <meta name="twitter:description" content="swift学习笔记">
@@ -149,7 +149,7 @@ var _hmt = _hmt || [];
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Learning/" style="font-size: 10px;">Learning</a> <a href="/tags/Stanford/" style="font-size: 10px;">Stanford</a> <a href="/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/tags/aboutme/" style="font-size: 10px;">aboutme</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/pug/" style="font-size: 10px;">pug</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a>
+						<a href="/tags/Learning/" style="font-size: 20px;">Learning</a> <a href="/tags/Stanford/" style="font-size: 20px;">Stanford</a> <a href="/tags/Xcode/" style="font-size: 20px;">Xcode</a> <a href="/tags/aboutme/" style="font-size: 10px;">aboutme</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/pug/" style="font-size: 10px;">pug</a> <a href="/tags/swift/" style="font-size: 20px;">swift</a>
 					</div>
 				</section>
 				
@@ -253,6 +253,7 @@ var _hmt = _hmt || [];
         <p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/swift_coffee.png" alt="image"></p>
 <h2 id="写在前面">写在前面</h2><p>这个系列的博客想记录下最近这段时间学习swift的平台，也想更多人参与讨论学习swift和iOS开发。学习教材是斯坦福大学的 iOS 8教程。老师是：Paul Hegarty，很喜欢这个白胡子老爷爷。博主有半年时间的iOS开发经验，希望和大家一起学习这个语言</p>
 <h2 id="第一个swift程序：Calculator">第一个swift程序：Calculator</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line">class ViewController: UIViewController &#123;</span><br><span class="line">	@IBOutlet weak var display: UILabel!</span><br><span class="line">	var userIsInTheMiddleOfTypingANumber: Bool = <span class="literal">false</span></span><br><span class="line">	@IBAction func appendDigit(sender: UIButton) &#123;</span><br><span class="line">	    <span class="built_in">let</span> digit = sender.currentTitle!</span><br><span class="line">	    <span class="keyword">if</span> userIsInTheMiddleOfTypingANumber&#123;</span><br><span class="line">	        display.text = display.text! + digit</span><br><span class="line">	    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	        display.text=digit</span><br><span class="line">	        userIsInTheMiddleOfTypingANumber=<span class="literal">true</span></span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>Swift 说实话比起Obj-c要友善太多，看着上面几行代码，一般有程序基础的人都可以非常清楚的读懂代码，但是也会发出质疑，那个_感叹号！_到底是什么意思？</p>
 <h2 id="感叹号">感叹号</h2><p>Swift语言使用var定义变量，但和别的语言不同，Swift里不会自动给变量赋初始值，也就是说变量不会有默认值，所以要求使用变量之前必须要对其初始化。如果在使用变量之前不进行初始化就会报错。</p>
 <p><strong>Swift增加了optional型别，用于处理值不存在的情况。optional表示「那儿有一个值，并且它等于x 」或者「那儿没有值」。</strong></p>
@@ -276,15 +277,20 @@ var _hmt = _hmt || [];
     
 <nav id="article-nav">
   
-    <a href="/2015/06/24/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/06/25/跟sun学swift(二)/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Hello World！
+          跟sun学swift(二)
         
       </div>
     </a>
   
+  
+    <a href="/2015/06/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World！</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 

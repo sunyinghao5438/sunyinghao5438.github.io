@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Geek Football Ingeniousness]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://sunyinghao5438.com//"/>
-  <updated>2015-06-23T23:50:19.000Z</updated>
+  <updated>2015-06-25T15:42:48.000Z</updated>
   <id>http://sunyinghao5438.com//</id>
   
   <author>
@@ -16,23 +16,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Hello World！]]></title>
-    <link href="http://sunyinghao5438.com/2015/06/24/hello-world/"/>
-    <id>http://sunyinghao5438.com/2015/06/24/hello-world/</id>
-    <published>2015-06-24T15:50:33.000Z</published>
-    <updated>2015-06-23T23:50:19.000Z</updated>
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/IMG_0461.jpg" alt="image"></p>
-<p>和这个美好的世界say hi.</p>
+    <title><![CDATA[跟sun学swift(二)]]></title>
+    <link href="http://sunyinghao5438.com/2015/06/25/%E8%B7%9Fsun%E5%AD%A6swift(%E4%BA%8C)/"/>
+    <id>http://sunyinghao5438.com/2015/06/25/跟sun学swift(二)/</id>
+    <published>2015-06-25T10:18:56.000Z</published>
+    <updated>2015-06-25T15:42:48.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="MVC">MVC</h2><p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/mvc.jpg" alt="image"><br>其实蛮心疼 白胡子爷爷的，每年的iOS都要复习一次MVC。这边我就不加详细介绍MVC了，但是如果是对MVC不是很熟悉的，一定需要看正规大牛的MVC详解，对今后的编程非常有帮助</p>
+<h2 id="感叹号&amp;问号">感叹号&amp;问号</h2><p><strong>!</strong><br>这个惊叹号表示“我知道这个可选有值，请使用它。”这被称为可选值的强制解析（forced unwrapping）<br><strong>?</strong><br>问号暗示包含的值是可选类型，举个🍐<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var 我是可选类型: Int? = <span class="number">404</span></span><br></pre></td></tr></table></figure></p>
+<p>也就是说 <code>我是可选类型</code> 可能包含Int值也可能不包含值。这里要注意，<code>我是可选类型</code> 不可能是其他类型比如 <code>Bool</code> 值或者 <code>String</code>，只可能是 <code>Int</code>或者 <code>什么都没有</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我是可选类型 = nil</span><br></pre></td></tr></table></figure></p>
+<p>神奇的事情发生了，<code>我是可选类型</code> 变成了nil，可以这么理解， <code>我是可选类型</code> 充当了一个墙头草的角色，可以随时进行转变。<br><a id="more"></a><br><strong>注意：<br>Swift 的nil和 Objective-C 中的nil并不一样。在 Objective-C 中，nil是一个指向不存在对象的指针。在 Swift 中，nil不是指针——它是一个确定的值，用来表示值缺失。任何类型的可选状态都可以被设置为nil，不只是对象类型。</strong></p>
+<h2 id="继续Calculator">继续Calculator</h2><h3 id="函数重载">函数重载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">func preformOperation(operation: (Double, Double) -&gt; Double)&#123;</span><br><span class="line">    <span class="keyword">if</span> operandStack.count &gt;= <span class="number">2</span> &#123;</span><br><span class="line">        displayValue = operation(operandStack.removeLast(),operandStack.removeLast())</span><br><span class="line">        enter()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">func preformOperation(operation: Double -&gt; Double)&#123;</span><br><span class="line">    <span class="keyword">if</span> operandStack.count &gt;= <span class="number">1</span> &#123;</span><br><span class="line">        displayValue = operation(operandStack.removeLast())</span><br><span class="line">        enter()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Method ‘performOperation’ with Objective-C selector ‘performOperation:’ conflicts with previous declaration with the same Objective-C selector<br>编译器会提示报错，这边我一直很困惑。其实这边代码继承了<code>UIViewController</code> 这是一个Object-C的类，然而Object-C是不支持重载的。如果你不继承一个 Object-C的类，这个代码是没有问题，所以swift是支持函数的重载。<br>解决办法：</p>
+<pre><code class="bash">func preformOperation(operation: (Double, Double) -&gt; Double){
+    <span class="keyword">if</span> operandStack.count &gt;= <span class="number">2</span> {
+        displayValue = operation(operandStack.removeLast(),operandStack.removeLast())
+        enter()
+    }
+}
+private func preformOperation(operation: Double -&gt; Double){
+    <span class="keyword">if</span> operandStack.count &gt;= <span class="number">1</span> {
+        displayValue = operation(operandStack.removeLast())
+        enter()
+    }
+}
+</code></pre>
+<p>把一个设置成私有的可以解决这个问题。（有点傻逼）</p>
+<p><a href="https://github.com/sunyinghao5438/Calculator-swift" target="_blank" rel="external">代码下载</a><br>&lt;!—more—&gt;</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[hello world!博客第一天的第一篇文章]]>
+    <![CDATA[swift学习笔记]]>
     
     </summary>
     
-      <category term="aboutme" scheme="http://sunyinghao5438.com/tags/aboutme/"/>
+      <category term="Learning" scheme="http://sunyinghao5438.com/tags/Learning/"/>
     
-      <category term="pug" scheme="http://sunyinghao5438.com/tags/pug/"/>
+      <category term="Stanford" scheme="http://sunyinghao5438.com/tags/Stanford/"/>
+    
+      <category term="Xcode" scheme="http://sunyinghao5438.com/tags/Xcode/"/>
+    
+      <category term="iOS" scheme="http://sunyinghao5438.com/tags/iOS/"/>
+    
+      <category term="swift" scheme="http://sunyinghao5438.com/tags/swift/"/>
     
   </entry>
   
@@ -41,10 +65,11 @@
     <link href="http://sunyinghao5438.com/2015/06/24/%E8%B7%9Fsun%E5%AD%A6swift(%E4%B8%80)/"/>
     <id>http://sunyinghao5438.com/2015/06/24/跟sun学swift(一)/</id>
     <published>2015-06-24T10:36:41.000Z</published>
-    <updated>2015-06-25T09:15:37.000Z</updated>
+    <updated>2015-06-25T15:43:11.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/swift_coffee.png" alt="image"></p>
 <h2 id="写在前面">写在前面</h2><p>这个系列的博客想记录下最近这段时间学习swift的平台，也想更多人参与讨论学习swift和iOS开发。学习教材是斯坦福大学的 iOS 8教程。老师是：Paul Hegarty，很喜欢这个白胡子老爷爷。博主有半年时间的iOS开发经验，希望和大家一起学习这个语言</p>
 <h2 id="第一个swift程序：Calculator">第一个swift程序：Calculator</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line">class ViewController: UIViewController &#123;</span><br><span class="line">	@IBOutlet weak var display: UILabel!</span><br><span class="line">	var userIsInTheMiddleOfTypingANumber: Bool = <span class="literal">false</span></span><br><span class="line">	@IBAction func appendDigit(sender: UIButton) &#123;</span><br><span class="line">	    <span class="built_in">let</span> digit = sender.currentTitle!</span><br><span class="line">	    <span class="keyword">if</span> userIsInTheMiddleOfTypingANumber&#123;</span><br><span class="line">	        display.text = display.text! + digit</span><br><span class="line">	    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	        display.text=digit</span><br><span class="line">	        userIsInTheMiddleOfTypingANumber=<span class="literal">true</span></span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>Swift 说实话比起Obj-c要友善太多，看着上面几行代码，一般有程序基础的人都可以非常清楚的读懂代码，但是也会发出质疑，那个_感叹号！_到底是什么意思？</p>
 <h2 id="感叹号">感叹号</h2><p>Swift语言使用var定义变量，但和别的语言不同，Swift里不会自动给变量赋初始值，也就是说变量不会有默认值，所以要求使用变量之前必须要对其初始化。如果在使用变量之前不进行初始化就会报错。</p>
 <p><strong>Swift增加了optional型别，用于处理值不存在的情况。optional表示「那儿有一个值，并且它等于x 」或者「那儿没有值」。</strong></p>
@@ -74,6 +99,27 @@
       <category term="iOS" scheme="http://sunyinghao5438.com/tags/iOS/"/>
     
       <category term="swift" scheme="http://sunyinghao5438.com/tags/swift/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World！]]></title>
+    <link href="http://sunyinghao5438.com/2015/06/23/hello-world/"/>
+    <id>http://sunyinghao5438.com/2015/06/23/hello-world/</id>
+    <published>2015-06-23T10:18:56.000Z</published>
+    <updated>2015-06-25T15:41:14.000Z</updated>
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/IMG_0461.jpg" alt="image"></p>
+<p>和这个美好的世界say hi.<br><a id="more"></a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[hello world!博客第一天的第一篇文章]]>
+    
+    </summary>
+    
+      <category term="aboutme" scheme="http://sunyinghao5438.com/tags/aboutme/"/>
+    
+      <category term="pug" scheme="http://sunyinghao5438.com/tags/pug/"/>
     
   </entry>
   
