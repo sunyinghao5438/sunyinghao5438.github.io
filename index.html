@@ -243,27 +243,12 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="enum">enum</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">enum Optional&lt;T&gt;&#123;</span><br><span class="line">	<span class="keyword">case</span> None</span><br><span class="line">	<span class="keyword">case</span> Some(T)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>今天要讲的是一些比较基础的知识。</p>
+<h1 id="enum">enum</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">enum Optional&lt;T&gt;&#123;</span><br><span class="line">	<span class="keyword">case</span> None</span><br><span class="line">	<span class="keyword">case</span> Some(T)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>第一个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x: String?=nil</span><br></pre></td></tr></table></figure></p>
 <p>等价于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x = Optional&lt;String&gt;.None</span><br></pre></td></tr></table></figure></p>
 <p>第二个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x: String?=“hello”</span><br></pre></td></tr></table></figure></p>
 <p>等价于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x = Optional&lt;String&gt;.Some(<span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>接下来是一个解包的过程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">switch x&#123;</span><br><span class="line">	<span class="keyword">case</span> Some(<span class="built_in">let</span> value): y = value</span><br><span class="line">	<span class="keyword">case</span> None: //这边会报错</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这个例子很好解释了用 <code>enum</code> 实现 <code>Optional</code> ，也对 <code>Optional</code> 有更好的理解，值得细细品味。</p>
-<h1 id="Array">Array</h1><p>中文教程<a href="http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/chapter2/04_Collection_Types.html#arrays" target="_blank" rel="external">戳这里</a><br>除此之外，使用加法赋值运算符 <code>+=</code> 也可以直接在数组后面添加一个或多个拥有相同类型的数据项<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var animals=[<span class="string">"Giraffe"</span>,<span class="string">"Cow"</span>,<span class="string">"Doggie"</span>,<span class="string">"Bird"</span>]</span><br><span class="line">animals += [<span class="string">"Pig"</span>]</span><br></pre></td></tr></table></figure></p>
-<p>数组的遍历<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> shoppingList &#123;</span><br><span class="line">    println(item)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>感觉现在的新语言遍历都是用这种方式说实话还是怀念以前C语言的 <code>for(i=0;i&lt;=1;i++)</code> </p>
-<h1 id="Dictionary">Dictionary</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var animals = Dictionary&lt;String, Int&gt;()</span><br></pre></td></tr></table></figure>
-<p>等价于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var animals = [String, Int]()</span><br></pre></td></tr></table></figure></p>
-<p>再举一个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">animals = [<span class="string">"Pig"</span>:<span class="number">1</span>, <span class="string">"Fish"</span>:<span class="number">2</span>]</span><br><span class="line"><span class="built_in">let</span> animal= animals[<span class="string">"Cow"</span>]</span><br></pre></td></tr></table></figure></p>
-<p>这个时候系统会返回一个 <code>nil</code> 因为字典里面没有 <code>Cow</code></p>
-<p>字典的遍历<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (key, value) <span class="keyword">in</span> animals&#123;</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">"\(key)=\(value)"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>反正就是怎么简单怎么来</p>
-<h1 id="Range">Range</h1><p>我个人感觉就是一把尺子，有起点终点。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct Range&lt;T&gt; &#123;</span><br><span class="line">	var startIndex: T</span><br><span class="line">	var endIndex: T</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>关于 <code>Rang</code> 的赋值：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> array = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>]</span><br><span class="line"><span class="built_in">let</span> subArray1 = array[<span class="number">2</span>...<span class="number">3</span>]// subArray1 will be [<span class="string">"c"</span>,d<span class="string">""</span>]</span><br><span class="line"><span class="built_in">let</span> subArray2 = array[<span class="number">2</span>..&lt;<span class="number">2</span>]// subArray2 will be [<span class="string">"c"</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">27</span>...<span class="number">104</span>] &#123;&#125;      // Range is enumeratable, like Array, String, Dictionary</span><br></pre></td></tr></table></figure></p>
-<h1 id="NSObject">NSObject</h1><p>一句话总结，就是最叼对基础的一个类，大家都可以继承他</p>
-<h1 id="NSNumber,NSDATA">NSNumber,NSDATA</h1><p>大家去看官方的教程吧，比我介绍的要靠谱的多</p>
-<h1 id="Properties">Properties</h1>
       
     </div>
     
@@ -276,6 +261,10 @@ var _hmt = _hmt || [];
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/01/跟sun学swift(四)/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

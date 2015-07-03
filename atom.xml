@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Geek Football Ingeniousness]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://sunyinghao5438.com//"/>
-  <updated>2015-07-03T00:57:34.000Z</updated>
+  <updated>2015-07-03T00:59:22.000Z</updated>
   <id>http://sunyinghao5438.com//</id>
   
   <author>
@@ -20,12 +20,14 @@
     <link href="http://sunyinghao5438.com/2015/07/01/%E8%B7%9Fsun%E5%AD%A6swift(%E5%9B%9B)/"/>
     <id>http://sunyinghao5438.com/2015/07/01/跟sun学swift(四)/</id>
     <published>2015-07-01T10:08:43.000Z</published>
-    <updated>2015-07-03T00:57:34.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="enum">enum</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">enum Optional&lt;T&gt;&#123;</span><br><span class="line">	<span class="keyword">case</span> None</span><br><span class="line">	<span class="keyword">case</span> Some(T)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <updated>2015-07-03T00:59:22.000Z</updated>
+    <content type="html"><![CDATA[<p>今天要讲的是一些比较基础的知识。</p>
+<h1 id="enum">enum</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">enum Optional&lt;T&gt;&#123;</span><br><span class="line">	<span class="keyword">case</span> None</span><br><span class="line">	<span class="keyword">case</span> Some(T)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>第一个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x: String?=nil</span><br></pre></td></tr></table></figure></p>
 <p>等价于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x = Optional&lt;String&gt;.None</span><br></pre></td></tr></table></figure></p>
 <p>第二个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x: String?=“hello”</span><br></pre></td></tr></table></figure></p>
 <p>等价于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x = Optional&lt;String&gt;.Some(<span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>接下来是一个解包的过程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">switch x&#123;</span><br><span class="line">	<span class="keyword">case</span> Some(<span class="built_in">let</span> value): y = value</span><br><span class="line">	<span class="keyword">case</span> None: //这边会报错</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这个例子很好解释了用 <code>enum</code> 实现 <code>Optional</code> ，也对 <code>Optional</code> 有更好的理解，值得细细品味。</p>
 <h1 id="Array">Array</h1><p>中文教程<a href="http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/chapter2/04_Collection_Types.html#arrays" target="_blank" rel="external">戳这里</a><br>除此之外，使用加法赋值运算符 <code>+=</code> 也可以直接在数组后面添加一个或多个拥有相同类型的数据项<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var animals=[<span class="string">"Giraffe"</span>,<span class="string">"Cow"</span>,<span class="string">"Doggie"</span>,<span class="string">"Bird"</span>]</span><br><span class="line">animals += [<span class="string">"Pig"</span>]</span><br></pre></td></tr></table></figure></p>
