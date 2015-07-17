@@ -3,18 +3,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>跟sun学swift(四) | sunyinghao5438</title>
+  <title>关于主题连接Instagram，和Instagram的API | sunyinghao5438</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="swift学习笔记">
+  <meta name="description" content="关于主题连接Instagram">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跟sun学swift(四)">
-<meta property="og:url" content="http://sunyinghao5438.com/2015/07/01/跟sun学swift(四)/index.html">
+<meta property="og:title" content="关于主题连接Instagram，和Instagram的API">
+<meta property="og:url" content="http://sunyinghao5438.com/2015/07/16/关于主题连接Instagram/index.html">
 <meta property="og:site_name" content="sunyinghao5438">
-<meta property="og:description" content="swift学习笔记">
-<meta property="og:updated_time" content="2015-07-03T00:59:22.000Z">
+<meta property="og:description" content="关于主题连接Instagram">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/Register.jpg">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/signup.jpg">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/registerapi.jpg">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/completeclients.jpg">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/takeaccess.jpg">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/code.jpg">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/codechuxian.jpg">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/layoutofuseaccess.jpg">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/testaccess.jpg">
+<meta property="og:image" content="http://7xjwqy.com1.z0.glb.clouddn.com/testchenggong.jpg">
+<meta property="og:updated_time" content="2015-07-17T01:22:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跟sun学swift(四)">
-<meta name="twitter:description" content="swift学习笔记">
+<meta name="twitter:title" content="关于主题连接Instagram，和Instagram的API">
+<meta name="twitter:description" content="关于主题连接Instagram">
   
   
     <link rel="icon" href="http://7xjwqy.com1.z0.glb.clouddn.com/fav.png">
@@ -216,11 +226,11 @@ var _hmt = _hmt || [];
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-跟sun学swift(四)" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于主题连接Instagram" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/01/跟sun学swift(四)/" class="article-date">
-  	<time datetime="2015-07-01T10:08:43.000Z" itemprop="datePublished">01/07/2015</time>
+      <a href="/2015/07/16/关于主题连接Instagram/" class="article-date">
+  	<time datetime="2015-07-16T20:18:56.000Z" itemprop="datePublished">16/07/2015</time>
 </a>
     </div>
   
@@ -233,7 +243,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      跟sun学swift(四)
+      关于主题连接Instagram，和Instagram的API
     </h1>
   
 
@@ -242,7 +252,7 @@ var _hmt = _hmt || [];
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/">Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Stanford/">Stanford</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Instagram/">Instagram</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/图片/">图片</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/连接/">连接</a></li></ul>
 	</div>
 
         
@@ -253,29 +263,28 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天要讲的是一些比较基础的知识。</p>
-<h1 id="enum">enum</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">enum Optional&lt;T&gt;&#123;</span><br><span class="line">	<span class="keyword">case</span> None</span><br><span class="line">	<span class="keyword">case</span> Some(T)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>第一个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x: String?=nil</span><br></pre></td></tr></table></figure></p>
-<p>等价于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x = Optional&lt;String&gt;.None</span><br></pre></td></tr></table></figure></p>
-<p>第二个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x: String?=“hello”</span><br></pre></td></tr></table></figure></p>
-<p>等价于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x = Optional&lt;String&gt;.Some(<span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>接下来是一个解包的过程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">switch x&#123;</span><br><span class="line">	<span class="keyword">case</span> Some(<span class="built_in">let</span> value): y = value</span><br><span class="line">	<span class="keyword">case</span> None: //这边会报错</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这个例子很好解释了用 <code>enum</code> 实现 <code>Optional</code> ，也对 <code>Optional</code> 有更好的理解，值得细细品味。</p>
-<h1 id="Array">Array</h1><p>中文教程<a href="http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/chapter2/04_Collection_Types.html#arrays" target="_blank" rel="external">戳这里</a><br>除此之外，使用加法赋值运算符 <code>+=</code> 也可以直接在数组后面添加一个或多个拥有相同类型的数据项<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var animals=[<span class="string">"Giraffe"</span>,<span class="string">"Cow"</span>,<span class="string">"Doggie"</span>,<span class="string">"Bird"</span>]</span><br><span class="line">animals += [<span class="string">"Pig"</span>]</span><br></pre></td></tr></table></figure></p>
-<p>数组的遍历<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> shoppingList &#123;</span><br><span class="line">    println(item)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>感觉现在的新语言遍历都是用这种方式说实话还是怀念以前C语言的 <code>for(i=0;i&lt;=1;i++)</code> </p>
-<h1 id="Dictionary">Dictionary</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var animals = Dictionary&lt;String, Int&gt;()</span><br></pre></td></tr></table></figure>
-<p>等价于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var animals = [String, Int]()</span><br></pre></td></tr></table></figure></p>
-<p>再举一个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">animals = [<span class="string">"Pig"</span>:<span class="number">1</span>, <span class="string">"Fish"</span>:<span class="number">2</span>]</span><br><span class="line"><span class="built_in">let</span> animal= animals[<span class="string">"Cow"</span>]</span><br></pre></td></tr></table></figure></p>
-<p>这个时候系统会返回一个 <code>nil</code> 因为字典里面没有 <code>Cow</code></p>
-<p>字典的遍历<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (key, value) <span class="keyword">in</span> animals&#123;</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">"\(key)=\(value)"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>反正就是怎么简单怎么来</p>
-<h1 id="Range">Range</h1><p>我个人感觉就是一把尺子，有起点终点。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct Range&lt;T&gt; &#123;</span><br><span class="line">	var startIndex: T</span><br><span class="line">	var endIndex: T</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>关于 <code>Rang</code> 的赋值：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> array = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>]</span><br><span class="line"><span class="built_in">let</span> subArray1 = array[<span class="number">2</span>...<span class="number">3</span>]// subArray1 will be [<span class="string">"c"</span>,d<span class="string">""</span>]</span><br><span class="line"><span class="built_in">let</span> subArray2 = array[<span class="number">2</span>..&lt;<span class="number">2</span>]// subArray2 will be [<span class="string">"c"</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">27</span>...<span class="number">104</span>] &#123;&#125;      // Range is enumeratable, like Array, String, Dictionary</span><br></pre></td></tr></table></figure></p>
-<h1 id="NSObject">NSObject</h1><p>一句话总结，就是最叼对基础的一个类，大家都可以继承他</p>
-<h1 id="NSNumber,NSDATA">NSNumber,NSDATA</h1><p>大家去看官方的教程吧，比我介绍的要靠谱的多</p>
-<h1 id="Properties">Properties</h1>
+        <h2 id="感谢">感谢</h2><p>首先要感谢 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a> ，致敬！</p>
+<h2 id="关于这篇文章">关于这篇文章</h2><p>这篇文章主要是关于 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a> 主题内Instagram 图片无法读取提供的一些建议，再聊聊关于Instagram的API的一些极其基础的知识。</p>
+<h2 id="Instagram_的API和图片导入Hexo主题">Instagram 的API和图片导入Hexo主题</h2><p>我也是最近才接触关于一些API和Json的知识，如果有错误欢迎大家指出</p>
+<h3 id="Register">Register</h3><p>首先登陆 <a href="https://instagram.com/developer/" target="_blank" rel="external">https://instagram.com/developer/</a><br><img src="http://7xjwqy.com1.z0.glb.clouddn.com/Register.jpg" alt="image"><br>注册第一个应用<br><a id="more"></a><br><img src="http://7xjwqy.com1.z0.glb.clouddn.com/signup.jpg" alt="image"><br>注册 Instagram API 用户<br><img src="http://7xjwqy.com1.z0.glb.clouddn.com/registerapi.jpg" alt="image"><br>这边是要注意的是 <strong>Redirect URI(s)</strong> 当用户用你的应用，完成认证（接受或者不接受）后，重定向的网站地址。<br><img src="http://7xjwqy.com1.z0.glb.clouddn.com/completeclients.jpg" alt="image"><br>这个时候我们已经有 <code>client_id</code> 这把钥匙，其实我们已经可以利用API得到一些数据</p>
+<h3 id="Authentication">Authentication</h3><p>很多接口我们只需要 <code>client_id</code> 就可以了，但大部分的接口我们需要一个 <code>access_token</code> 的东西。如何得到这个 <code>access_token</code> 是我们要讨论的问题。官方文档有两种方法可以得到 <code>access_token</code></p>
+<h6 id="step_1">step 1</h6><p>直接到已经认证了的url，<br>—&gt; 如果用户没有登陆，会要求先登陆，<br>—&gt; 用户会被要求允许使用你的应用去访问他们的Instagram的数据</p>
+<h6 id="step_2">step 2</h6><p>你有两种方式让服务器得到 <code>access_token</code><br><strong>Server-side flow（建议）</strong><br>将用户重定向到你的url，拿取代码的参数和并把这个代码发到我们的 <code>access_token</code> url，去换取 <code>access_token</code><br><strong>Implicit flow</strong><br>我们把 <code>access_token</code> 放到url里面，服务器就可以得到 <code>access_token</code> ，但这也会意味着不够安全</p>
+<p>这里要重点介绍下 <code>Server-side flow</code></p>
+<h6 id="第一步">第一步</h6><p>直接让你的用户到你的验证的url，这边假设你自己就是你的第一个用户，这边会要求你登陆自己的instagram<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&amp;redirect_uri=REDIRECT-URI&amp;response_<span class="built_in">type</span>=code</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/takeaccess.jpg" alt="image"></p>
+<p>要求认证？赶紧批准呗</p>
+<h6 id="第二步">第二步</h6><p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/code.jpg" alt="image"></p>
+<p>这边第一个马赛克是你的重定向的域名，第二个马赛克就是非常关键的code 会在第三步中使用</p>
+<h6 id="第三步">第三步</h6><p>现在你有了code 要去交换你的 <code>access_token</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https://api.instagram.com/oauth/access_token client_id=</span><br><span class="line">    -F <span class="string">'client_secret=CLIENT_SECRET'</span> \</span><br><span class="line">    -F <span class="string">'grant_type=authorization_code'</span> \</span><br><span class="line">    -F <span class="string">'redirect_uri=AUTHORIZATION_REDIRECT_URI'</span> \</span><br><span class="line">    -F <span class="string">'code=CODE'</span> \</span><br></pre></td></tr></table></figure></p>
+<p>把这个上面的代码自己该下，然后贴到 Terminal 里，你会发现你要的 <code>access_token</code> 出现了<br><img src="http://7xjwqy.com1.z0.glb.clouddn.com/codechuxian.jpg" alt="image"><br>会出现下面的页面<br><img src="http://7xjwqy.com1.z0.glb.clouddn.com/layoutofuseaccess.jpg" alt="image"></p>
+<p>还有一种方法是 <strong>Implicit flow</strong> 因为个人觉得不太安全，但是确实是方便很多<br><a href="http://litten.github.io/2014/03/03/instagram-api-ex/" target="_blank" rel="external">戳这里</a>有教程！</p>
+<h3 id="Requests">Requests</h3><p>有了这个 <code>access_token</code> 世界突然变得光明了起来！<br>去这里 <a href="https://apigee.com/embed/console/instagram?apig_cc=1" target="_blank" rel="external">https://apigee.com/embed/console/instagram?apig_cc=1</a></p>
+<p>选择 <strong>users/{user-id}/media/recent</strong> 这个方法，填完你的 <code>user-id</code> 然后send<br>你会发现 <code>This Method needs Authentication. Please select an Authentication scheme.</code><br>说明这个方法要需要认证的机制，那就在 <code>Authentication</code> 下选择 <code>OAuth 2.0</code><br>然后填写完你的 <code>user-id</code> 赶紧的send吧</p>
+<p><img src="http://7xjwqy.com1.z0.glb.clouddn.com/testaccess.jpg" alt="image"><br>尼玛为什么还是不可以<br>这边就日了个狗，<strong>查了一些资料发现 <code>user-id</code> 和你的用户名不是一个东西！</strong><br>虽然不知道是根据什么机制，这个非官方的网站可以轻而易举的获得你的 <code>user-id</code><br><a href="http://jelled.com/instagram/lookup-user-id" target="_blank" rel="external">http://jelled.com/instagram/lookup-user-id</a><br>具体是根据什么原理，我以后会解释。<br>终于！！！<br><img src="http://7xjwqy.com1.z0.glb.clouddn.com/testchenggong.jpg" alt="image"><br>然后在浏览器里面输入你要send的东西 满满的喜悦感！你已经拿到了你自己的相册的Json数据库。</p>
+<h3 id="最后一步，配置你的主题，并显示Instagram">最后一步，配置你的主题，并显示Instagram</h3><p>这里已经不再重要了，因为你应该已经 掌握了API的知识<br><a href="https://github.com/litten/hexo-theme-yilia/wiki/%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84instagram%E5%9B%BE%E7%89%87" target="_blank" rel="external">戳这里告诉你</a><br>好啦，恭喜你，你的Instagram相册已经显示！</p>
+<h3 id="补充知识">补充知识</h3><p>这里不得不要提一下 OAuth 2.0 到底是一个什么样的东西，比如新浪的API 也采用了OAuth 2.0，到底和OAuth 1.0 有什么区别呢？这里我采用了知乎里的答案<br><em>采用xAuth认证的桌面应用和移动应用可以跳过oauth/request_token（获取Request Token）以及oauth/authorize（授权Request Token）两步，只要提供了username和password以后，即可直接通过oauth/access_token接口得到Access Token。<br>这样做的好处是客户端可以直接使用Native界面来定制和显示授权页面，而原始的OAuth则必须到服务商的WEB页面去进行授权，用户体验会比xAuth要差<br>OAuth 2.0是OAuth协议的下一版本，但不向后兼容OAuth 1.0。 OAuth 2.0关注客户端开发者的简易性，同时为Web应用，桌面应用和手机，和起居室设备提供专门的认证流程。</em><br>来自 <a href="http://www.zhihu.com/people/chen-yi-hu" target="_blank" rel="external">陈翼虎</a><br>如果要了解具体的知识可以 <a href="http://huoding.com/2011/11/08/126" target="_blank" rel="external">戳我</a></p>
+
       
     </div>
     
@@ -284,18 +293,9 @@ var _hmt = _hmt || [];
     
 <nav id="article-nav">
   
-    <a href="/2015/07/16/关于主题连接Instagram/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          关于主题连接Instagram，和Instagram的API
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/06/29/跟sun学swift(三)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">跟sun学swift(三)</div>
+    <a href="/2015/07/01/跟sun学swift(四)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">跟sun学swift(四)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -321,7 +321,7 @@ var _hmt = _hmt || [];
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="跟sun学swift(四)" data-title="跟sun学swift(四)" data-url="http://sunyinghao5438.com/2015/07/01/跟sun学swift(四)/"></div>
+	<div class="ds-thread" data-thread-key="关于主题连接Instagram" data-title="关于主题连接Instagram，和Instagram的API" data-url="http://sunyinghao5438.com/2015/07/16/关于主题连接Instagram/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
